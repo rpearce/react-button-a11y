@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`react-button-a11y renders, children 1`] = `
+<div
+  aria-label="Mock Label"
+  className="mock-className"
+  onClick={[MockFunction]}
+  onKeyDown={[Function]}
+  role="button"
+  tabIndex="0"
+>
+  Click me
+</div>
+`;
+
+exports[`react-button-a11y renders, no children 1`] = `
+<div
+  aria-label="Mock Label"
+  className="mock-className"
+  onClick={[MockFunction]}
+  onKeyDown={[Function]}
+  role="button"
+  tabIndex="0"
+/>
+`;
+
+exports[`react-button-a11y renders, span element 1`] = `
+<span
+  aria-label="Mock Label"
+  className="mock-className"
+  onClick={[MockFunction]}
+  onKeyDown={[Function]}
+  role="button"
+  tabIndex="0"
+/>
+`;
+
+exports[`react-button-a11y renders, strict mode disabled 1`] = `
+<span
+  className="mock-className"
+  onClick={[MockFunction]}
+  onKeyDown={[Function]}
+  role="button"
+  tabIndex="0"
+/>
+`;

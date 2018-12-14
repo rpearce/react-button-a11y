@@ -1,0 +1,75 @@
+{
+  "name": "react-button-a11y",
+  "version": "0.1.0",
+  "description": "Make non-button elements accessible in React",
+  "main": "index.js",
+  "repository": "git@github.com:rpearce/react-button-a11y.git",
+  "author": "Robert Pearce <me@robertwpearce.com>",
+  "license": "ISC",
+  "keywords": [
+    "accessibility",
+    "a11y",
+    "react",
+    "react-component"
+  ],
+  "tags": [
+    "accessibility",
+    "a11y",
+    "react",
+    "react-component"
+  ],
+  "files": [
+    "AUTHORS",
+    "LICENSE",
+    "README.md",
+    "src/"
+  ],
+  "scripts": {
+    "build": "yarn run lint && yarn run build:js && yarn run build:docs",
+    "build:docs": "browserify example/app.js -o docs/app.js -t [ babelify ]",
+    "build:js": "babel source --out-dir src",
+    "contributors:add": "all-contributors add",
+    "contributors:generate": "all-contributors generate",
+    "lint": "eslint --ext .js .",
+    "prepublishOnly": "yarn run build",
+    "test": "jest",
+    "test:coverage": "jest --coverage --no-cache"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "<rootDir>/source/**/*.js"
+    ],
+    "setupTestFrameworkScriptFile": "<rootDir>/test/setup.js",
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.0",
+    "@babel/core": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
+    "@babel/preset-react": "^7.0.0",
+    "all-contributors-cli": "^5.4.1",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
+    "babelify": "^10.0.0",
+    "browserify": "^16.2.3",
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-16": "^1.7.1",
+    "enzyme-to-json": "^3.3.5",
+    "eslint": "^5.10.0",
+    "eslint-plugin-jest": "^22.1.2",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1",
+    "jest": "^23.6.0",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3"
+  },
+  "peerDependencies": {
+    "react": ">= 15",
+    "react-dom": ">= 15"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.0.0"
+  }
+}
