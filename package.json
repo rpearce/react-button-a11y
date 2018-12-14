@@ -3,8 +3,16 @@
   "version": "0.1.0",
   "description": "Make non-button elements accessible in React",
   "main": "index.js",
-  "repository": "git@github.com:rpearce/react-button-a11y.git",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:rpearce/react-button-a11y.git"
+  },
+  "homepage": "https://github.com/rpearce/react-button-a11y",
+  "bugs": "https://github.com/rpearce/react-button-a11y/issues",
   "author": "Robert Pearce <me@robertwpearce.com>",
+  "contributors": [
+    "Robert Pearce <me@robertwpearce.com> (https://robertwpearce.com)"
+  ],
   "license": "ISC",
   "keywords": [
     "accessibility",
@@ -25,13 +33,13 @@
     "src/"
   ],
   "scripts": {
-    "build": "yarn run lint && yarn run build:js && yarn run build:docs",
+    "build": "npm run lint && npm run build:js && npm run build:docs",
     "build:docs": "browserify example/app.js -o docs/app.js -t [ babelify ]",
     "build:js": "babel source --out-dir src",
     "contributors:add": "all-contributors add",
     "contributors:generate": "all-contributors generate",
     "lint": "eslint --ext .js .",
-    "prepublishOnly": "yarn run build",
+    "prepublishOnly": "npm run build",
     "test": "jest",
     "test:coverage": "jest --coverage --no-cache"
   },
