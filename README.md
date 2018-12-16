@@ -1,7 +1,7 @@
 # react-button-a11y
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
 
-[![npm version](https://img.shields.io/npm/v/react-button-a11y.svg)](https://www.npmjs.com/package/react-button-a11y) [![npm downloads](https://img.shields.io/npm/dt/react-button-a11y.svg)](https://www.npmjs.com/package/react-button-a11y) [![build status](https://travis-ci.org/rpearce/react-button-a11y.svg?branch=master)](https://travis-ci.org/rpearce/react-button-a11y) [![Coverage Status](https://coveralls.io/repos/github/rpearce/react-button-a11y/badge.svg?branch=travis)](https://coveralls.io/github/rpearce/react-button-a11y?branch=travis)
+[![npm version](https://img.shields.io/npm/v/react-button-a11y.svg)](https://www.npmjs.com/package/react-button-a11y) [![npm downloads](https://img.shields.io/npm/dt/react-button-a11y.svg)](https://www.npmjs.com/package/react-button-a11y) [![Build Status](https://travis-ci.org/rpearce/react-button-a11y.svg?branch=master)](https://travis-ci.org/rpearce/react-button-a11y) [![Coverage Status](https://coveralls.io/repos/github/rpearce/react-button-a11y/badge.svg?branch=travis)](https://coveralls.io/github/rpearce/react-button-a11y?branch=travis)
 
 Make non-button elements accessible in React. This component applies the
 following to an element that wants to be a "button":
