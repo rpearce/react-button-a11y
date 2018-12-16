@@ -38,10 +38,10 @@
     "build:js": "babel source --out-dir src",
     "contributors:add": "all-contributors add",
     "contributors:generate": "all-contributors generate",
+    "coverage": "jest --coverage --coverageReporters=text-lcov | coveralls",
     "lint": "eslint --ext .js .",
     "prepublishOnly": "npm run build",
-    "test": "jest",
-    "test:coverage": "jest --coverage --no-cache"
+    "test": "npm run lint && npm run build && jest --coverage"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -62,6 +62,7 @@
     "babel-jest": "^23.6.0",
     "babelify": "^10.0.0",
     "browserify": "^16.2.3",
+    "coveralls": "^3.0.2",
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.7.1",
     "enzyme-to-json": "^3.3.5",
