@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`react-button-a11y renders, children 1`] = `
+exports[`react-button-a11y component renders, children 1`] = `
 <div
   aria-label="Mock Label"
   className="mock-className"
@@ -13,7 +13,7 @@ exports[`react-button-a11y renders, children 1`] = `
 </div>
 `;
 
-exports[`react-button-a11y renders, no children 1`] = `
+exports[`react-button-a11y component renders, no children 1`] = `
 <div
   aria-label="Mock Label"
   className="mock-className"
@@ -24,7 +24,37 @@ exports[`react-button-a11y renders, no children 1`] = `
 />
 `;
 
-exports[`react-button-a11y renders, span element 1`] = `
+exports[`react-button-a11y component renders, ref passed in 1`] = `
+<ButtonA11y
+  aria-label="Mock Label"
+  className="mock-className"
+  element="div"
+  forwardedRef={
+    Object {
+      "current": <div
+        aria-label="Mock Label"
+        class="mock-className"
+        role="button"
+        tabindex="0"
+      />,
+    }
+  }
+  onClick={[MockFunction]}
+  onKeyDown={[Function]}
+  strictMode={true}
+>
+  <div
+    aria-label="Mock Label"
+    className="mock-className"
+    onClick={[MockFunction]}
+    onKeyDown={[Function]}
+    role="button"
+    tabIndex="0"
+  />
+</ButtonA11y>
+`;
+
+exports[`react-button-a11y component renders, span element 1`] = `
 <span
   aria-label="Mock Label"
   className="mock-className"
@@ -35,12 +65,25 @@ exports[`react-button-a11y renders, span element 1`] = `
 />
 `;
 
-exports[`react-button-a11y renders, strict mode disabled 1`] = `
-<span
+exports[`react-button-a11y component renders, strict mode disabled 1`] = `
+<div
+  aria-label="Mock Label"
   className="mock-className"
   onClick={[MockFunction]}
   onKeyDown={[Function]}
   role="button"
   tabIndex="0"
+/>
+`;
+
+exports[`react-button-a11y container renders 1`] = `
+<ButtonA11y
+  aria-label="Mock Label"
+  className="mock-className"
+  element="div"
+  forwardedRef={null}
+  onClick={[MockFunction]}
+  onKeyDown={[Function]}
+  strictMode={true}
 />
 `;
