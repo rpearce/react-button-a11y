@@ -5,7 +5,7 @@ import ButtonA11y from '../'
 class App extends Component {
   render() {
     return (
-      <div className="container">
+      <div>
         <section>
           <h2>Button with children</h2>
           <ButtonA11y

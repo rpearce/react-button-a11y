@@ -43,9 +43,7 @@ function (_Component) {
   _createClass(App, [{
     key: "render",
     value: function render() {
-      return _react.default.createElement("div", {
-        className: "container"
-      }, _react.default.createElement("section", null, _react.default.createElement("h2", null, "Button with children"), _react.default.createElement(_.default, {
+      return _react.default.createElement("div", null, _react.default.createElement("section", null, _react.default.createElement("h2", null, "Button with children"), _react.default.createElement(_.default, {
         className: "btn--words",
         onClick: function onClick() {
           return window.alert('pressed first one');
