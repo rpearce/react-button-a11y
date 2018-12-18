@@ -38,9 +38,21 @@ Tests are located in the `test/` folder. Here's how to run them:
 $ yarn test
 ```
 
+To test in watch mode:
+
+```
+$ yarn test --watch
+```
+
+To update snapshot tests:
+
+```
+$ yarn test -u
+```
+
 ## Test Coverage
 100% test coverage is what we strive for, and you can check that by running
 
 ```
-$ yarn test:coverage
+$ yarn coverage
 ```
