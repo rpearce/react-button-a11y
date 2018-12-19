@@ -3,9 +3,9 @@ import { renderIntoDocument } from 'react-dom/test-utils'
 import { mount, shallow } from 'enzyme'
 import toJson from 'enzyme-to-json'
 
-import Container, { ButtonA11y } from '../source/react-button-a11y'
+import Container, { ButtonA11y } from '../source'
 
-describe('react-button-a11y', () => {
+describe('ButtonA11y', () => {
 
   describe('container', () => {
 

@@ -79,6 +79,7 @@
     "react-dom": ">= 16.3"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.0.0"
+    "@babel/polyfill": "^7.0.0",
+    "react-with-forwarded-ref": "^0.1.0"
   }
 }

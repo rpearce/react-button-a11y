@@ -1,4 +1,5 @@
-import React, { PureComponent, createElement, forwardRef } from 'react'
+import { PureComponent, createElement } from 'react'
+import withForwardedRef from 'react-with-forwarded-ref'
 
 // isSelect :: KeyboardEvent -> Bool
 const isSelect = e =>
@@ -50,8 +51,4 @@ ButtonA11y.defaultProps = {
   strictMode: true
 }
 
-const WrappedComponent = forwardRef((props, ref) =>
-  <ButtonA11y {...props} forwardedRef={ref} />
-)
-
-export default WrappedComponent
+export default withForwardedRef(ButtonA11y)

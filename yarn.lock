@@ -4977,6 +4977,13 @@ react-test-renderer@^16.0.0-0:
     react-is "^16.6.3"
     scheduler "^0.11.2"
 
+react-with-forwarded-ref@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/react-with-forwarded-ref/-/react-with-forwarded-ref-0.1.0.tgz#105658548957dec5fdd6c01f5ecda5f7a44020ab"
+  integrity sha512-2VjYW1qwMxbUqnJwsS8CAcZSYB7gp4fxg2fucLK8y5tnuXGQxtbAGKajLuT7gZHWODzmesW0dm4RkvafWoNz7A==
+  dependencies:
+    "@babel/polyfill" "^7.0.0"
+
 react@^16.6.3:
   version "16.6.3"
   resolved "https://registry.yarnpkg.com/react/-/react-16.6.3.tgz#25d77c91911d6bbdd23db41e70fb094cc1e0871c"
