@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`react-button-a11y component renders, children 1`] = `
+exports[`ButtonA11y component renders, children 1`] = `
 <div
   aria-label="Mock Label"
   className="mock-className"
@@ -13,7 +13,7 @@ exports[`react-button-a11y component renders, children 1`] = `
 </div>
 `;
 
-exports[`react-button-a11y component renders, no children 1`] = `
+exports[`ButtonA11y component renders, no children 1`] = `
 <div
   aria-label="Mock Label"
   className="mock-className"
@@ -24,7 +24,7 @@ exports[`react-button-a11y component renders, no children 1`] = `
 />
 `;
 
-exports[`react-button-a11y component renders, ref passed in 1`] = `
+exports[`ButtonA11y component renders, ref passed in 1`] = `
 <ButtonA11y
   aria-label="Mock Label"
   className="mock-className"
@@ -54,7 +54,7 @@ exports[`react-button-a11y component renders, ref passed in 1`] = `
 </ButtonA11y>
 `;
 
-exports[`react-button-a11y component renders, span element 1`] = `
+exports[`ButtonA11y component renders, span element 1`] = `
 <span
   aria-label="Mock Label"
   className="mock-className"
@@ -65,7 +65,7 @@ exports[`react-button-a11y component renders, span element 1`] = `
 />
 `;
 
-exports[`react-button-a11y component renders, strict mode disabled 1`] = `
+exports[`ButtonA11y component renders, strict mode disabled 1`] = `
 <div
   aria-label="Mock Label"
   className="mock-className"
@@ -76,7 +76,7 @@ exports[`react-button-a11y component renders, strict mode disabled 1`] = `
 />
 `;
 
-exports[`react-button-a11y container renders 1`] = `
+exports[`ButtonA11y container renders 1`] = `
 <ButtonA11y
   aria-label="Mock Label"
   className="mock-className"
