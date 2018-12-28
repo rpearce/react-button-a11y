@@ -31,7 +31,7 @@ describe('ButtonA11y', () => {
           ref={ref}
         />
       )
-      expect(ref.current).toBeInstanceOf(HTMLDivElement)
+      expect(ref.current).toBeInstanceOf(HTMLSpanElement)
     })
 
   })
