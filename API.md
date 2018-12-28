@@ -4,7 +4,7 @@
 | ---  | --- | ---  | --- | --- |
 | `aria-label` | String | yes if `children` absent | none | Pass an `aria-label` if you don't pass children with descriptive text |
 | `children` | Node | yes if `aria-label` absent | none | Pass `children` with descriptive text if you don't pass an `aria-label` |
-| `element` | String | no | `'div'` | The default element is a `div`, but you can pass a `span`, e.g., if you like |
+| `element` | String | no | `'span'` | The default element is a `div`, but you can pass a `span`, e.g., if you like |
 | `onClick` | Function | yes | `Function.prototype` | When the button is "pressed" (via Enter or Spacebar or click), this callback will be triggered with the event |
 | `strictMode` | Bool | no | `true` | An error will be thrown if enabled and you fail to pass both an `aria-label` and `children` |
 
