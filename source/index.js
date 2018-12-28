@@ -45,7 +45,7 @@ export class ButtonA11y extends PureComponent {
 }
 
 ButtonA11y.defaultProps = {
-  element: 'div',
+  element: 'span',
   onClick: Function.prototype,
   onKeyDown: Function.prototype,
   strictMode: true
