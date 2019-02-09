@@ -1,4 +1,4 @@
-import { PureComponent, createElement } from 'react'
+import { createElement, memo, useCallback } from 'react'
 import withForwardedRef from 'react-with-forwarded-ref'
 
 // isSelect :: KeyboardEvent -> Bool
@@ -9,39 +9,40 @@ const isSelect = e =>
   e.keyCode === 13 ||
   e.keyCode === 32
 
-export class ButtonA11y extends PureComponent {
-  constructor(...params) {
-    super(...params)
-    this.handleKeyDown = this.handleKeyDown.bind(this)
+const ButtonA11y = ({
+  children,
+  element,
+  forwardedRef,
+  onClick,
+  onKeyDown,
+  strictMode,
+  ...rest
+}) => {
+  if (strictMode && !children && !rest['aria-label']) {
+    throw new Error('react-button-a11y: `aria-label` required for accessibility')
   }
 
-  handleKeyDown(e) {
-    const { onClick, onKeyDown } = this.props
+  const handleKeyDown = useCallback(
+    e => {
+      onKeyDown(e)
 
-    onKeyDown(e)
+      if (isSelect(e)) {
+        e.preventDefault()
+        onClick(e)
+      }
+    },
+    []
+  )
 
-    if (isSelect(e)) {
-      e.preventDefault()
-      onClick(e)
-    }
-  }
-
-  render() {
-    const { children, element, forwardedRef, strictMode, ...rest } = this.props
-
-    if (strictMode && !children && !rest['aria-label']) {
-      throw new Error('react-button-a11y: `aria-label` required for accessibility')
-    }
-
-    return createElement(element, {
-      ...rest,
-      children,
-      onKeyDown: this.handleKeyDown,
-      ref: forwardedRef,
-      role: 'button',
-      tabIndex: '0'
-    })
-  }
+  return createElement(element, {
+    ...rest,
+    children,
+    onClick,
+    onKeyDown: handleKeyDown,
+    ref: forwardedRef,
+    role: 'button',
+    tabIndex: '0'
+  })
 }
 
 ButtonA11y.defaultProps = {
@@ -51,4 +52,4 @@ ButtonA11y.defaultProps = {
   strictMode: true
 }
 
-export default withForwardedRef(ButtonA11y)
+export default memo(withForwardedRef(ButtonA11y))
