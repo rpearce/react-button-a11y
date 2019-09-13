@@ -124,7 +124,7 @@ var ButtonA11y = function ButtonA11y(_ref) {
       e.preventDefault();
       onClick(e);
     }
-  }, []);
+  }, [onClick, onKeyDown]);
   return react.createElement(element, _objectSpread2({}, rest, {
     children: children,
     onClick: onClick,
@@ -182,12 +182,12 @@ var App = function App() {
     return pressBtn1(function (x) {
       return !x;
     });
-  }, [isBtn1Pressed]);
+  }, []);
   var handleBtn2Click = (0, _react.useCallback)(function () {
     return pressBtn2(function (x) {
       return !x;
     });
-  }, [isBtn2Pressed]);
+  }, []);
   var btn1Label = isBtn1Pressed ? 'Pressed' : 'Press me';
   var btn1Class = 'btn--words'.concat(isBtn1Pressed ? ' btn--pressed' : '');
   var btn2Label = isBtn2Pressed ? 'Pressed' : 'Press me';
