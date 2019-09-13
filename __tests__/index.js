@@ -1,6 +1,6 @@
 import React, { createRef } from 'react'
-import { fireEvent, render } from 'react-testing-library'
-import 'jest-dom/extend-expect'
+import { fireEvent, render } from '@testing-library/react'
+import '@testing-library/jest-dom/extend-expect'
 
 import ButtonA11y from '../source'
 
@@ -25,10 +25,7 @@ test('renders with aria-label, handles click', () => {
 test('renders with children, handles click', () => {
   const onClick = jest.fn()
   const { getByText } = render(
-    <ButtonA11y
-      className="mock-className"
-      onClick={onClick}
-    >
+    <ButtonA11y className="mock-className" onClick={onClick}>
       Click Me
     </ButtonA11y>
   )
@@ -44,10 +41,7 @@ test('renders with children, handles click', () => {
 test('renders with button role and tabIndex 0', () => {
   const onClick = jest.fn()
   const { getByText } = render(
-    <ButtonA11y
-      className="mock-className"
-      onClick={onClick}
-    >
+    <ButtonA11y className="mock-className" onClick={onClick}>
       Click Me
     </ButtonA11y>
   )
@@ -226,11 +220,7 @@ test('only calls onKeyDown when random keyCode', () => {
 test('does not break when onKeyDown not passed', () => {
   const onClick = jest.fn()
   const { getByText } = render(
-    <ButtonA11y
-      className="mock-className"
-      onClick={onClick}
-      type=""
-    >
+    <ButtonA11y className="mock-className" onClick={onClick} type="">
       Click Me
     </ButtonA11y>
   )
@@ -246,11 +236,7 @@ test('does not break when onKeyDown not passed', () => {
 test('does not break when onClick not passed', () => {
   const onKeyDown = jest.fn()
   const { getByText } = render(
-    <ButtonA11y
-      className="mock-className"
-      onKeyDown={onKeyDown}
-      type=""
-    >
+    <ButtonA11y className="mock-className" onKeyDown={onKeyDown} type="">
       Click Me
     </ButtonA11y>
   )
@@ -265,11 +251,7 @@ test('does not break when onClick not passed', () => {
 
 test('renders as div element', () => {
   const { container, getByText } = render(
-    <ButtonA11y
-      className="mock-className"
-      element="div"
-      onClick={jest.fn()}
-    >
+    <ButtonA11y className="mock-className" element="div" onClick={jest.fn()}>
       Click Me
     </ButtonA11y>
   )
@@ -281,11 +263,7 @@ test('renders as div element', () => {
 test('forwards a ref', () => {
   const ref = createRef()
   render(
-    <ButtonA11y
-      className="mock-className"
-      onClick={jest.fn()}
-      ref={ref}
-    >
+    <ButtonA11y className="mock-className" onClick={jest.fn()} ref={ref}>
       Click Me
     </ButtonA11y>
   )
@@ -302,9 +280,7 @@ test('errors when no children & no aria-label', () => {
         onClick={jest.fn()}
       />
     )
-  }).toThrow(
-    'react-button-a11y: `aria-label` required for accessibility'
-  )
+  }).toThrow('react-button-a11y: `aria-label` required for accessibility')
 })
 
 // This is allowed but is unwise for accessibility
