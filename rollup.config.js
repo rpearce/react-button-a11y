@@ -16,7 +16,7 @@ const plugins = [
 ]
 
 const esm = {
-  name: 'react-expanding-textarea',
+  name: 'react-button-a11y',
   file: './dist/index.esm.js',
   format: 'esm',
   exports: 'named',
@@ -24,7 +24,7 @@ const esm = {
 }
 
 const cjs = {
-  name: 'react-expanding-textarea',
+  name: 'react-button-a11y',
   file: './dist/index.cjs.js',
   format: 'cjs',
   exports: 'named',
