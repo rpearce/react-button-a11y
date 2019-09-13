@@ -1,6 +1,6 @@
 {
   "name": "react-button-a11y",
-  "version": "3.0.1",
+  "version": "4.0.0",
   "description": "Make non-button elements accessible in React",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
