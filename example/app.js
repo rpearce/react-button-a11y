@@ -3,17 +3,11 @@ import ReactDOM from 'react-dom'
 import ButtonA11y from '../'
 
 const App = () => {
-  const [ isBtn1Pressed, pressBtn1 ] = useState(false)
-  const [ isBtn2Pressed, pressBtn2 ] = useState(false)
+  const [isBtn1Pressed, pressBtn1] = useState(false)
+  const [isBtn2Pressed, pressBtn2] = useState(false)
 
-  const handleBtn1Click = useCallback(
-    () => pressBtn1(x => !x),
-    [ isBtn1Pressed ]
-  )
-  const handleBtn2Click = useCallback(
-    () => pressBtn2(x => !x),
-    [ isBtn2Pressed ]
-  )
+  const handleBtn1Click = useCallback(() => pressBtn1(x => !x), [])
+  const handleBtn2Click = useCallback(() => pressBtn2(x => !x), [])
 
   const btn1Label = isBtn1Pressed ? 'Pressed' : 'Press me'
   const btn1Class = 'btn--words'.concat(isBtn1Pressed ? ' btn--pressed' : '')
@@ -25,10 +19,7 @@ const App = () => {
     <div>
       <section>
         <h2>Button with children</h2>
-        <ButtonA11y
-          className={btn1Class}
-          onClick={handleBtn1Click}
-        >
+        <ButtonA11y className={btn1Class} onClick={handleBtn1Click}>
           {btn1Label}
         </ButtonA11y>
       </section>

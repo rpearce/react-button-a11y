@@ -19,7 +19,9 @@ const ButtonA11y = ({
   ...rest
 }) => {
   if (strictMode && !children && !rest['aria-label']) {
-    throw new Error('react-button-a11y: `aria-label` required for accessibility')
+    throw new Error(
+      'react-button-a11y: `aria-label` required for accessibility'
+    )
   }
 
   const handleKeyDown = useCallback(
@@ -31,7 +33,7 @@ const ButtonA11y = ({
         onClick(e)
       }
     },
-    []
+    [onClick, onKeyDown]
   )
 
   return createElement(element, {
