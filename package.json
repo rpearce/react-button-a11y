@@ -60,7 +60,7 @@
     "babelify": "^10.0.0",
     "browserify": "^16.5.0",
     "coveralls": "^3.0.6",
-    "eslint": "^6.3.0",
+    "eslint": "^6.4.0",
     "eslint-config-prettier": "^6.3.0",
     "eslint-plugin-jest": "^22.17.0",
     "eslint-plugin-jsx-a11y": "^6.2.3",
