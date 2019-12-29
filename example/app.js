@@ -1,6 +1,6 @@
 import React, { useCallback, useState } from 'react'
 import ReactDOM from 'react-dom'
-import ButtonA11y from '../'
+import ButtonA11y from '../dist/esm'
 
 const App = () => {
   const [isBtn1Pressed, pressBtn1] = useState(false)
