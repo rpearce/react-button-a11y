@@ -5559,10 +5559,10 @@ react-is@^16.8.1, react-is@^16.8.4:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.12.0.tgz#2cc0fe0fba742d97fd527c42a13bec4eeb06241c"
   integrity sha512-rPCkf/mWBtKc97aLL9/txD8DZdemK0vkA3JMLShjlJB3Pj3s+lpf1KaBzMfQrAmhMQB0n1cU/SUGgKKBCe837Q==
 
-react-with-forwarded-ref@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/react-with-forwarded-ref/-/react-with-forwarded-ref-0.2.0.tgz#306a10ee650b90305c6a63fd9d166926453e4409"
-  integrity sha512-Sp7UU6CtcOdv8grvkEZhHiVq16rDIo1CvHDKfaHj9ZaXKpobPOuW2GvIgo1B5BVnM2qlBl6Z5rB62SyYg9OtLg==
+react-with-forwarded-ref@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/react-with-forwarded-ref/-/react-with-forwarded-ref-0.3.0.tgz#a0500015d350f51983d3e97cfb4839ffb944992c"
+  integrity sha512-VubukTf62H1xIZMpbH1Tdv3z/la6IUSNuAkQqVp2jPdDPHOuTxXAFsX/CZGcHMW8YJ1qBkBYsl6ps1fi0zdnyA==
 
 react@^16.12.0:
   version "16.12.0"
