@@ -1,146 +1,147 @@
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 "use strict";
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports["default"] = void 0;
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
-var _react = require("react");
+(function (global, factory) {
+  (typeof exports === "undefined" ? "undefined" : _typeof(exports)) === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('react-with-forwarded-ref')) : typeof define === 'function' && define.amd ? define(['exports', 'react', 'react-with-forwarded-ref'], factory) : (global = global || self, factory(global['rba-umd'] = {}, global.React, global.withForwardedRef));
+})(void 0, function (exports, react, withForwardedRef) {
+  'use strict';
 
-var _reactWithForwardedRef = _interopRequireDefault(require("react-with-forwarded-ref"));
+  withForwardedRef = withForwardedRef && withForwardedRef.hasOwnProperty('default') ? withForwardedRef['default'] : withForwardedRef;
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-function _defineProperty(obj, key, value) {
-  if (key in obj) {
-    Object.defineProperty(obj, key, {
-      value: value,
-      enumerable: true,
-      configurable: true,
-      writable: true
-    });
-  } else {
-    obj[key] = value;
-  }
-
-  return obj;
-}
-
-function ownKeys(object, enumerableOnly) {
-  var keys = Object.keys(object);
-
-  if (Object.getOwnPropertySymbols) {
-    var symbols = Object.getOwnPropertySymbols(object);
-    if (enumerableOnly) symbols = symbols.filter(function (sym) {
-      return Object.getOwnPropertyDescriptor(object, sym).enumerable;
-    });
-    keys.push.apply(keys, symbols);
-  }
-
-  return keys;
-}
-
-function _objectSpread2(target) {
-  for (var i = 1; i < arguments.length; i++) {
-    var source = arguments[i] != null ? arguments[i] : {};
-
-    if (i % 2) {
-      ownKeys(Object(source), true).forEach(function (key) {
-        _defineProperty(target, key, source[key]);
+  function _defineProperty(obj, key, value) {
+    if (key in obj) {
+      Object.defineProperty(obj, key, {
+        value: value,
+        enumerable: true,
+        configurable: true,
+        writable: true
       });
-    } else if (Object.getOwnPropertyDescriptors) {
-      Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
     } else {
-      ownKeys(Object(source)).forEach(function (key) {
-        Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
-      });
+      obj[key] = value;
     }
+
+    return obj;
   }
 
-  return target;
-}
+  function ownKeys(object, enumerableOnly) {
+    var keys = Object.keys(object);
 
-function _objectWithoutPropertiesLoose(source, excluded) {
-  if (source == null) return {};
-  var target = {};
-  var sourceKeys = Object.keys(source);
-  var key, i;
+    if (Object.getOwnPropertySymbols) {
+      var symbols = Object.getOwnPropertySymbols(object);
+      if (enumerableOnly) symbols = symbols.filter(function (sym) {
+        return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+      });
+      keys.push.apply(keys, symbols);
+    }
 
-  for (i = 0; i < sourceKeys.length; i++) {
-    key = sourceKeys[i];
-    if (excluded.indexOf(key) >= 0) continue;
-    target[key] = source[key];
+    return keys;
   }
 
-  return target;
-}
+  function _objectSpread2(target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i] != null ? arguments[i] : {};
 
-function _objectWithoutProperties(source, excluded) {
-  if (source == null) return {};
+      if (i % 2) {
+        ownKeys(Object(source), true).forEach(function (key) {
+          _defineProperty(target, key, source[key]);
+        });
+      } else if (Object.getOwnPropertyDescriptors) {
+        Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
+      } else {
+        ownKeys(Object(source)).forEach(function (key) {
+          Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
+        });
+      }
+    }
 
-  var target = _objectWithoutPropertiesLoose(source, excluded);
+    return target;
+  }
 
-  var key, i;
+  function _objectWithoutPropertiesLoose(source, excluded) {
+    if (source == null) return {};
+    var target = {};
+    var sourceKeys = Object.keys(source);
+    var key, i;
 
-  if (Object.getOwnPropertySymbols) {
-    var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
-
-    for (i = 0; i < sourceSymbolKeys.length; i++) {
-      key = sourceSymbolKeys[i];
+    for (i = 0; i < sourceKeys.length; i++) {
+      key = sourceKeys[i];
       if (excluded.indexOf(key) >= 0) continue;
-      if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;
       target[key] = source[key];
     }
+
+    return target;
   }
 
-  return target;
-}
+  function _objectWithoutProperties(source, excluded) {
+    if (source == null) return {};
 
-var isSelect = function isSelect(e) {
-  return e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar' || e.keyCode === 13 || e.keyCode === 32;
-};
+    var target = _objectWithoutPropertiesLoose(source, excluded);
 
-var ButtonA11y = function ButtonA11y(_ref) {
-  var children = _ref.children,
-      element = _ref.element,
-      forwardedRef = _ref.forwardedRef,
-      onClick = _ref.onClick,
-      onKeyDown = _ref.onKeyDown,
-      strictMode = _ref.strictMode,
-      rest = _objectWithoutProperties(_ref, ["children", "element", "forwardedRef", "onClick", "onKeyDown", "strictMode"]);
+    var key, i;
 
-  if (strictMode && !children && !rest['aria-label']) {
-    throw new Error('react-button-a11y: `aria-label` required for accessibility');
-  }
+    if (Object.getOwnPropertySymbols) {
+      var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
 
-  var handleKeyDown = (0, _react.useCallback)(function (e) {
-    onKeyDown(e);
-
-    if (isSelect(e)) {
-      e.preventDefault();
-      onClick(e);
+      for (i = 0; i < sourceSymbolKeys.length; i++) {
+        key = sourceSymbolKeys[i];
+        if (excluded.indexOf(key) >= 0) continue;
+        if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;
+        target[key] = source[key];
+      }
     }
-  }, [onClick, onKeyDown]);
-  return (0, _react.createElement)(element, _objectSpread2({}, rest, {
-    children: children,
-    onClick: onClick,
-    onKeyDown: handleKeyDown,
-    ref: forwardedRef,
-    role: 'button',
-    tabIndex: '0'
-  }));
-};
 
-ButtonA11y.defaultProps = {
-  element: 'span',
-  onClick: Function.prototype,
-  onKeyDown: Function.prototype,
-  strictMode: true
-};
-var index = (0, _react.memo)((0, _reactWithForwardedRef["default"])(ButtonA11y));
-var _default = index;
-exports["default"] = _default;
+    return target;
+  }
+
+  var isSelect = function isSelect(e) {
+    return e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar' || e.keyCode === 13 || e.keyCode === 32;
+  };
+
+  var ButtonA11y = function ButtonA11y(_ref) {
+    var children = _ref.children,
+        element = _ref.element,
+        forwardedRef = _ref.forwardedRef,
+        onClick = _ref.onClick,
+        onKeyDown = _ref.onKeyDown,
+        strictMode = _ref.strictMode,
+        rest = _objectWithoutProperties(_ref, ["children", "element", "forwardedRef", "onClick", "onKeyDown", "strictMode"]);
+
+    if (strictMode && !children && !rest['aria-label']) {
+      throw new Error('react-button-a11y: `aria-label` required for accessibility');
+    }
+
+    var handleKeyDown = react.useCallback(function (e) {
+      onKeyDown(e);
+
+      if (isSelect(e)) {
+        e.preventDefault();
+        onClick(e);
+      }
+    }, [onClick, onKeyDown]);
+    return react.createElement(element, _objectSpread2({}, rest, {
+      children: children,
+      onClick: onClick,
+      onKeyDown: handleKeyDown,
+      ref: forwardedRef,
+      role: 'button',
+      tabIndex: '0'
+    }));
+  };
+
+  ButtonA11y.defaultProps = {
+    element: 'span',
+    onClick: Function.prototype,
+    onKeyDown: Function.prototype,
+    strictMode: true
+  };
+  var index = react.memo(withForwardedRef(ButtonA11y));
+  exports["default"] = index;
+  Object.defineProperty(exports, '__esModule', {
+    value: true
+  });
+});
 
 },{"react":13,"react-with-forwarded-ref":10}],2:[function(require,module,exports){
 "use strict";
@@ -151,7 +152,7 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _reactDom = _interopRequireDefault(require("react-dom"));
 
-var _esm = _interopRequireDefault(require("../dist/esm"));
+var _cjs = _interopRequireDefault(require("../dist/cjs"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -192,10 +193,10 @@ var App = function App() {
   var btn1Class = 'btn--words'.concat(isBtn1Pressed ? ' btn--pressed' : '');
   var btn2Label = isBtn2Pressed ? 'Pressed' : 'Press me';
   var btn2Class = 'btn--noWords'.concat(isBtn2Pressed ? ' btn--pressed' : '');
-  return _react["default"].createElement("div", null, _react["default"].createElement("section", null, _react["default"].createElement("h2", null, "Button with children"), _react["default"].createElement(_esm["default"], {
+  return _react["default"].createElement("div", null, _react["default"].createElement("section", null, _react["default"].createElement("h2", null, "Button with children"), _react["default"].createElement(_cjs["default"], {
     className: btn1Class,
     onClick: handleBtn1Click
-  }, btn1Label)), _react["default"].createElement("section", null, _react["default"].createElement("h2", null, "Button without children"), _react["default"].createElement(_esm["default"], {
+  }, btn1Label)), _react["default"].createElement("section", null, _react["default"].createElement("h2", null, "Button without children"), _react["default"].createElement(_cjs["default"], {
     "aria-label": btn2Label,
     className: btn2Class,
     onClick: handleBtn2Click
@@ -206,7 +207,7 @@ var container = document.querySelector('[data-app]');
 
 _reactDom["default"].render(_react["default"].createElement(App, null), container);
 
-},{"../dist/esm":1,"react":13,"react-dom":9}],3:[function(require,module,exports){
+},{"../dist/cjs":1,"react":13,"react-dom":9}],3:[function(require,module,exports){
 /*
 object-assign
 (c) Sindre Sorhus
